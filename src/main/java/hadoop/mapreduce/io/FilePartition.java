@@ -9,4 +9,10 @@ public class FilePartition {
 	private String fileName; // File name
 	private long start;	// start offset 
 	private long end;	// end offset
+	
+	public FilePartition(String fileName, long start, long end){
+		this.fileName = fileName;
+		this.start = start;
+		this.end = end;
+	}
 }
