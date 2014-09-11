@@ -15,4 +15,17 @@ public class FilePartition {
 		this.start = start;
 		this.end = end;
 	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public long getStart() {
+		return start;
+	}
+
+	public long getEnd() {
+		return end;
+	}
+	
 }

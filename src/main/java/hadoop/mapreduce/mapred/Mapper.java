@@ -1,5 +1,6 @@
 package hadoop.mapreduce.mapred;
 
+import hadoop.mapreduce.framework.MapTask;
 import hadoop.mapreduce.io.Context;
 import hadoop.mapreduce.io.TextRecordReader;
 
