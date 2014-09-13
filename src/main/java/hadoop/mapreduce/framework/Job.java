@@ -30,6 +30,10 @@ public class Job {
 	public int getId() {
 		return id;
 	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public int getNumReducers() {
 		return numReducers;
@@ -69,6 +73,10 @@ public class Job {
 	
 	public String getTmpMapOpDir() {
 		return outputDir + "tmp_" + getId() + "/";
+	}
+
+	public void setSplits(List<Split> splits) {
+		this.splits = splits;
 	}
 	
 }
