@@ -1,5 +1,6 @@
 package hadoop.mapreduce.framework;
 
+import java.io.File;
 import java.io.FileWriter;
 
 public class MapWorker implements Runnable{
@@ -14,7 +15,6 @@ public class MapWorker implements Runnable{
     			new File(task.getParentJob().getTmpMapOpDir() + "/logs.txt"));
         this.logsWriter.write("Start MapWorker!" + "\n");
         logsWriter.flush();
-
         } catch (Exception e) {
     		e.printStackTrace();
     	}
