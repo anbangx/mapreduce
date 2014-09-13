@@ -1,5 +1,7 @@
 package hadoop.mapreduce.framework;
 
+import hadoop.mapreduce.type.Task;
+
 import java.io.File;
 import java.io.FileWriter;
 

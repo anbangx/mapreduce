@@ -1,4 +1,5 @@
-package hadoop.mapreduce.framework;
+package hadoop.mapreduce.type;
+
 
 /**
  * This is the data class representing a specific task in the map-reduce task.

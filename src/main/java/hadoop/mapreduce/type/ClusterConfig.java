@@ -1,4 +1,4 @@
-package hadoop.mapreduce.framework;
+package hadoop.mapreduce.type;
 
 import java.util.List;
 

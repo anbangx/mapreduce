@@ -1,6 +1,8 @@
 package hadoop.mapreduce.framework;
 
 import hadoop.mapreduce.io.Split;
+import hadoop.mapreduce.type.ClusterConfig;
+import hadoop.mapreduce.type.Job;
 import hadoop.mapreduce.type.JobStatus;
 
 import java.io.IOException;
