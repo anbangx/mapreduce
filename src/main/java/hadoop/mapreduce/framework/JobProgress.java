@@ -6,8 +6,14 @@ public class JobProgress {
 	
 	private int jobId;
 	
-	private String message;
 	private JobStatus.JobState state;
+	double percentMapTaskFinished;
+    double percentReduceTaskFinished;
+    private String message;
+	
+	public JobProgress(int id) {
+		this.jobId = id;
+	}
 	
 	public int getJobId() {
 		return jobId;
@@ -32,5 +38,20 @@ public class JobProgress {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
+
+	public double getPercentMapTaskFinished() {
+		return percentMapTaskFinished;
+	}
+
+	public void setPercentMapTaskFinished(double percentMapTaskFinished) {
+		this.percentMapTaskFinished = percentMapTaskFinished;
+	}
+
+	public double getPercentReduceTaskFinished() {
+		return percentReduceTaskFinished;
+	}
+
+	public void setPercentReduceTaskFinished(double percentReduceTaskFinished) {
+		this.percentReduceTaskFinished = percentReduceTaskFinished;
+	}
 }

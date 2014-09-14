@@ -1,5 +1,10 @@
 package hadoop.mapreduce.framework;
 
+import hadoop.mapreduce.io.Split;
+import hadoop.mapreduce.type.Job;
+import hadoop.mapreduce.type.Task;
+import hadoop.mapreduce.type.Task.TaskType;
+
 /**
  * Contains all the information that is required for completing
  * a map task.
@@ -11,6 +16,16 @@ package hadoop.mapreduce.framework;
  * 5. Map Input key value and output key value (available in parentJob)
  * 6. Combiner class (available in parentJob). 
  */
-public class MapTask {
-	// TODO implement
+public class MapTask extends Task {
+
+	private static final long serialVersionUID = 1L;
+
+	private Split split;
+	
+	public MapTask(Job parentJob, int taskId, Split split) {
+		super(parentJob, taskId, TaskType.MAP);
+		
+		this.plit = split;
+	}
+
 }
