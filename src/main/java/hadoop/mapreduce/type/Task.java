@@ -8,19 +8,19 @@ package hadoop.mapreduce.type;
  * about which split to work on, the jar file location, the config file location
  * and other such information.
  */
-enum TaskState {
-	PENDING,
-	RUNNING,
-	SUCCESS,
-	RETRY,
-	FAILED
-}
-enum TaskType {
-	MAP,
-	REDUCE
-}
-
 abstract public class Task {
+	enum TaskState {
+		PENDING,
+		RUNNING,
+		SUCCESS,
+		RETRY,
+		FAILED
+	}
+	public enum TaskType {
+		MAP,
+		REDUCE
+	}
+	
 	// TODO implement
 	private Job parentJob;
 	private int taskId;
