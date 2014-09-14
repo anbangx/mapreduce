@@ -1,9 +1,11 @@
 package hadoop.mapreduce.framework;
 
 import java.util.HashMap;
+import java.util.Queue;
 
 import hadoop.mapreduce.type.ClusterConfig;
 import hadoop.mapreduce.type.JobStatus;
+import hadoop.mapreduce.type.Task;
 
 /**
  * JobTracker starts and maintains the MapReduce Job.
@@ -18,6 +20,8 @@ public class JobTracker {
 	private static int nextTaskId = 1;
 	
 	public HashMap<Integer, JobStatus> statuses;
+	private Queue<Task> pendingMapTasks;
+	private Queue<Task> pendingReduceTasks;
 	
 	public JobTracker(ClusterConfig clusterConfig) {
 		this.clusterConfig = clusterConfig;
@@ -29,6 +33,8 @@ public class JobTracker {
         // Launch thread that will communicate with the clients.
   		Thread clientThread = new Thread(new ClientHandler(this));
   		clientThread.start();
+  		
+  		
 	}
 	
 	public int getClientCommPort() {
@@ -47,4 +53,12 @@ public class JobTracker {
 		return statuses;
 	}
 
+	public Queue<Task> getPendingMapTasks() {
+		return pendingMapTasks;
+	}
+
+	public Queue<Task> getPendingReduceTasks() {
+		return pendingReduceTasks;
+	}
+	
 }
