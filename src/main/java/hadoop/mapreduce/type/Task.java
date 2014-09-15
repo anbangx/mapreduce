@@ -41,7 +41,17 @@ abstract public class Task {
 		this.percentComplete = 0;
 		this.attemptNum = 0;
 	}
-
+	
+	//Copy constructor
+	public Task(Task task) {
+		this.parentJob = task.getParentJob();
+		this.taskId = task.getTaskId();
+		this.state = task.getState();
+		this.attemptNum = task.getAttemptNum();
+		this.percentComplete = task.getPercentComplete();
+		this.taskType = task.getTaskType();
+	}
+	
 	public Job getParentJob() {
 		return parentJob;
 	}

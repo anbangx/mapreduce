@@ -25,7 +25,17 @@ public class MapTask extends Task {
 	public MapTask(Job parentJob, int taskId, Split split) {
 		super(parentJob, taskId, TaskType.MAP);
 		
-		this.plit = split;
+		this.split = split;
+	}
+	
+	// Copy constructor
+	public MapTask(MapTask task) {
+		super(task);
+		this.split = task.getSplit();
 	}
 
+	public Split getSplit() {
+		return split;
+	}
+	
 }
