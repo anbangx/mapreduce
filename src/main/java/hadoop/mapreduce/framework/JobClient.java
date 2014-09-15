@@ -90,7 +90,9 @@ public class JobClient {
 	}
 	
 	private static List<Split> computeSplits(Job job) {
-		//TODO implement
+		//TODO implement - finish by Sep 18th
 		return null;
 	}
+	
+	//TODO test
 }

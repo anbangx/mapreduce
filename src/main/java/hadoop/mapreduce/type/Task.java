@@ -1,6 +1,5 @@
 package hadoop.mapreduce.type;
 
-
 /**
  * This is the data class representing a specific task in the map-reduce task.
  * An instance of any of its subclass should contain all the information 
@@ -9,7 +8,7 @@ package hadoop.mapreduce.type;
  * and other such information.
  */
 abstract public class Task {
-	enum TaskState {
+	public enum TaskState {
 		PENDING,
 		RUNNING,
 		SUCCESS,
@@ -78,6 +77,34 @@ abstract public class Task {
 
 	public int getAttemptNum() {
 		return attemptNum;
+	}
+
+	public void setParentJob(Job parentJob) {
+		this.parentJob = parentJob;
+	}
+
+	public void setTaskId(int taskId) {
+		this.taskId = taskId;
+	}
+
+	public void setState(TaskState state) {
+		this.state = state;
+	}
+
+	public void setTaskType(TaskType taskType) {
+		this.taskType = taskType;
+	}
+
+	public void setTaskTrackerId(String taskTrackerId) {
+		this.taskTrackerId = taskTrackerId;
+	}
+
+	public void setPercentComplete(double percentComplete) {
+		this.percentComplete = percentComplete;
+	}
+
+	public void setAttemptNum(int attemptNum) {
+		this.attemptNum = attemptNum;
 	}
 	
 }

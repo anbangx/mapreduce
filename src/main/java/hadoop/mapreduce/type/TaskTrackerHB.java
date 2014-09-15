@@ -26,4 +26,53 @@ public class TaskTrackerHB {
 		this.tasksSnapshot = taskSnapshot;
 		this.sendTime = System.currentTimeMillis();
 	}
+
+	public String getTaskTrackerId() {
+		return taskTrackerId;
+	}
+
+	public void setTaskTrackerId(String taskTrackerId) {
+		this.taskTrackerId = taskTrackerId;
+	}
+
+	public int getNumFreeMapSlots() {
+		return numFreeMapSlots;
+	}
+
+	public void setNumFreeMapSlots(int numFreeMapSlots) {
+		this.numFreeMapSlots = numFreeMapSlots;
+	}
+
+	public int getNumFreeReduceSlots() {
+		return numFreeReduceSlots;
+	}
+
+	public void setNumFreeReduceSlots(int numFreeReduceSlots) {
+		this.numFreeReduceSlots = numFreeReduceSlots;
+	}
+
+	public boolean isInitHB() {
+		return isInitHB;
+	}
+
+	public void setInitHB(boolean isInitHB) {
+		this.isInitHB = isInitHB;
+	}
+
+	public List<Task> getTasksSnapshot() {
+		return tasksSnapshot;
+	}
+
+	public void setTasksSnapshot(List<Task> tasksSnapshot) {
+		this.tasksSnapshot = tasksSnapshot;
+	}
+
+	public long getSendTime() {
+		return sendTime;
+	}
+
+	public void setSendTime(long sendTime) {
+		this.sendTime = sendTime;
+	}
+	
 }

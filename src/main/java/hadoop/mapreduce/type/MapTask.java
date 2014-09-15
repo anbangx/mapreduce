@@ -1,9 +1,6 @@
-package hadoop.mapreduce.framework;
+package hadoop.mapreduce.type;
 
 import hadoop.mapreduce.io.Split;
-import hadoop.mapreduce.type.Job;
-import hadoop.mapreduce.type.Task;
-import hadoop.mapreduce.type.Task.TaskType;
 
 /**
  * Contains all the information that is required for completing

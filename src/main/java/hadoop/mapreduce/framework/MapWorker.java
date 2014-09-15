@@ -23,7 +23,6 @@ public class MapWorker implements Runnable{
     }
     
 	public void run() {
-		// TODO Auto-generated method stub
 		
 	}
 

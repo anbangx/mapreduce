@@ -1,7 +1,5 @@
-package hadoop.mapreduce.framework;
+package hadoop.mapreduce.type;
 
-import hadoop.mapreduce.type.Job;
-import hadoop.mapreduce.type.Task;
 
 public class ReduceTask extends Task {
 	
@@ -13,5 +11,19 @@ public class ReduceTask extends Task {
 		super(parentJob, taskId, TaskType.REDUCE);
 		this.partitionNumber = partitionNumber;
 	}
+	
+	// Copy constructor
+	public ReduceTask(ReduceTask task) {
+		super(task);
+		this.partitionNumber = task.getPartitionNumber();
+	}
 
+	public int getPartitionNumber() {
+		return partitionNumber;
+	}
+
+	public void setPartitionNumber(int partitionNumber) {
+		this.partitionNumber = partitionNumber;
+	}
+	
 }

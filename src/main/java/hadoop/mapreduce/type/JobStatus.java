@@ -1,8 +1,6 @@
 package hadoop.mapreduce.type;
 
 import hadoop.mapreduce.framework.JobTracker;
-import hadoop.mapreduce.framework.MapTask;
-import hadoop.mapreduce.framework.ReduceTask;
 import hadoop.mapreduce.io.Split;
 
 import java.util.TreeMap;
