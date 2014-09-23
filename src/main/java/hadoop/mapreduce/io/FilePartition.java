@@ -7,6 +7,18 @@ package hadoop.mapreduce.io;
  */
 public class FilePartition {
 	private String fileName; // File name
+	public String getFileName() {
+		return fileName;
+	}
+
+	public long getStart() {
+		return start;
+	}
+
+	public long getEnd() {
+		return end;
+	}
+
 	private long start;	// start offset 
 	private long end;	// end offset
 	
